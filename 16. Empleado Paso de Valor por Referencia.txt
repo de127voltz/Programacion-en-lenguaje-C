@@ -1,0 +1,80 @@
+#include <stdio.h>
+#include <stdlib.h>
+//Prototipo de funcion
+void LeerNombreEmpleado(char *nomb[]);    //Hacemos referencia a una cadena de caracteres
+void LeerPuestoEmpleado(char *puesto[]);
+void LeerEdad(int *edad);
+void LeerSalario(float *salario);
+void CalcularImpuesto(float *salario, float *impuesto);
+
+int main() {
+  char empleado1[30];
+  char empleado2[30];
+  char puesto1[30];
+  char puesto2[30];
+  int edad1=0;
+  int edad2=0;
+  float salario1=0;
+  float salario2=0;
+  float impuesto1=0;
+  float impuesto2=0;
+
+  printf("\tPROGRAMA DE TRABAJADORES\n\n");
+  LeerNombreEmpleado(empleado1);
+  LeerPuestoEmpleado(puesto1);
+  LeerEdad(&edad1);
+  LeerSalario(&salario1);
+  CalcularImpuesto(&salario1,&impuesto1);
+
+  system("CLS");
+
+  LeerNombreEmpleado(empleado2);
+  LeerPuestoEmpleado(puesto2);
+  LeerEdad(&edad2);
+  LeerSalario(&salario2);
+  CalcularImpuesto(&salario2,&impuesto2);
+
+  system("CLS");
+  printf("Empleado 1:\n\n");
+  printf("Nombre: %s\n",empleado1);
+  printf("Puesto: %s\n",puesto1);
+  printf("Edad: %d\n",edad1);
+  printf("Salario: $ %.3f\n", salario1);
+  printf("Impuesto: $ %.3f\n\n\n",impuesto1);
+
+  printf("Empleado 2:\n\n");
+  printf("Nombre: %s\n",empleado2);
+  printf("Puesto: %s\n",puesto2);
+  printf("Edad: %d\n",edad2);
+  printf("Salario: $ %.3f\n", salario2);
+  printf("Impuesto: $ %.3f\n",impuesto2);
+  fflush(stdin);
+  getchar();
+
+
+  return 0;
+}
+//Definicion de funciones
+void LeerNombreEmpleado(char *nomb[]){
+  printf("Nombre del empleado: ");
+  gets(nomb);
+  fflush(stdin);
+}
+void LeerPuestoEmpleado(char *puesto[]){
+  printf("Puesto del empleado: ");
+  gets(puesto);
+  fflush(stdin);
+}
+void LeerEdad(int *edad){
+  printf("Edad del empleado: ");
+  scanf("%d", edad);
+  fflush(stdin);
+}
+void LeerSalario(float *salario){
+  printf("Salario del empleado: ");
+  scanf("%f", salario);
+  fflush(stdin);
+}
+void CalcularImpuesto(float *salario, float *impuesto){
+  *impuesto = (*salario)*(0.15);
+}

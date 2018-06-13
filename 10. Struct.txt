@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct Persona{
+  char Nombre[60];
+  int edad;
+  float altura;
+}Persona;
+
+int main() {
+
+  Persona pers1;
+  Persona pers2;
+  printf("Dame tu nombre: ");
+  gets(pers1.Nombre);
+  fflush(stdin);
+  printf("Dame tu edad: ");
+  scanf("%d",&pers1.edad);
+  fflush(stdin);
+  printf("Dame tu altura en metros: ");
+  scanf("%f",&pers1.altura);
+  fflush(stdin);
+
+  system("CLS");
+
+  printf("Nombre: %s\n",pers1.Nombre);
+  printf("Edad: %d\n",pers1.edad);
+  printf("Altura: %.2f m\n",pers1.altura);
+
+  return 0;
+}

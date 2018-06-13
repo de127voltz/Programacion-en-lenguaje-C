@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int temperatura=0;
+
+  printf("\tPROGRAMA QUE REGISTRA TEMPERATURA\n\n");
+  printf("Ingresa un valor de temperatura en Celsius: ");
+  scanf("%d", &temperatura);
+  fflush(stdin);
+
+  if (temperatura >= 24) {
+    printf("En el lugar que te encuentras hace mucho CALOR\n");
+  }
+  else if ((temperatura >= 12) && (temperatura <24)) {
+    printf("En el lugar que te encuentras es TEMPLADO\n");
+  }
+  else {
+    printf("En el lugar que te encuentras hace demasiado FRIO\n");
+  }
+
+
+  return 0;
+}

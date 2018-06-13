@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+int main(int argc, char const *argv[]) {
+  int valor1=567;
+  long valor2=1233255;
+  float pi=3.141592;
+  double valor3=432242.3134;
+  char micaracter='b';
+  bool boton=false;
+
+  printf("Tipo de dato entero: %d o %i\n",valor1,valor1);
+  printf("Tipo de dato long: %ld\n",valor2);
+  printf("Tipo de dato flotante: %f o %.4f\n",pi, pi);
+  printf("Tipo de dato double: %.2f\n",valor3);
+  printf("Tipo de dato caracter: %c\n",micaracter);
+  printf("Tipo de dato booleano: %d\n", boton);
+
+  return 0;
+}

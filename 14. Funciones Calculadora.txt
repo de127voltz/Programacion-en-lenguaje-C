@@ -1,0 +1,116 @@
+//INCLUSION DE LIBRERIAS
+#include <stdio.h>
+#include <stdlib.h>
+
+//Prototipo de FUNCIONES
+float Suma(float N1, float N2);
+float Resta(float N1, float N2);
+float Multiplicacion(float N1, float N2);
+float Division(float N1, float N2);
+
+//FUNCION PRINCIPAL
+int main() {
+  int opc;
+  float num1=0;
+  float num2=0;
+  float resultado=0;
+
+  do {
+    system("CLS"); //Para limpiar en cada iteracion
+    printf("\tCALCULADORA\n\n"); //\t es para dar 5 espacios
+    printf("1.-Suma. \n");
+    printf("2.-Resta. \n");
+    printf("3.-Multiplicacion.\n");
+    printf("4.-Division.\n");
+    printf("5.-Salir.\n");
+    scanf("%d",&opc);
+    fflush(stdin);
+
+    switch (opc) {
+      case 1:
+        printf("Dame primero numero: ");
+        scanf("%f",&num1);
+        printf("Dame segundo numero: ");
+        scanf("%f",&num2);
+        resultado = Suma(num1,num2);
+        printf("Resultado es: %.3f\n",resultado);
+        fflush(stdin);
+        getchar();
+      break;
+      case 2:
+        printf("Dame primero numero: ");
+        scanf("%f",&num1);
+        printf("Dame segundo numero: ");
+        scanf("%f",&num2);
+        resultado = Resta(num1,num2);
+        printf("Resultado es: %.3f\n",resultado);
+        fflush(stdin);
+        getchar();
+      break;
+      case 3:
+        printf("Dame primero numero: ");
+        scanf("%f",&num1);
+        printf("Dame segundo numero: ");
+        scanf("%f",&num2);
+        resultado = Multiplicacion(num1,num2);
+        printf("Resultado es: %.3f\n",resultado);
+        fflush(stdin);
+        getchar();
+      break;
+      case 4:
+        printf("Dame primero numero: ");
+        scanf("%f",&num1);
+        printf("Dame segundo numero: ");
+        scanf("%f",&num2);
+        resultado = Division(num1,num2);
+        if(resultado==0){
+          printf("No es divisible");
+        }
+        else{
+          printf("Resultado es: %.3f\n",resultado);
+        }
+        fflush(stdin);
+        getchar();
+      break;
+      case 5:
+        printf("Saliendo...\n");
+      break;
+      default:
+        printf("ERROR.");
+    }
+
+
+  } while(opc!=5);
+
+  return 0;
+}
+
+//DEFINICION DE FUNCIONES
+float Suma(float N1, float N2){
+  float R=0;
+  R=N1+N2;
+  return R;
+}
+
+float Resta(float N1, float N2){
+  float R=0;
+  R=N1-N2;
+  return R;
+}
+
+float Multiplicacion(float N1, float N2){
+  float R=0;
+  R=N1*N2;
+  return R;
+}
+
+float Division(float N1, float N2){
+  float R=0;
+  if(N2==0){
+    R=0;
+  }
+  else{
+    R=N1/N2;
+  }
+  return R;
+}

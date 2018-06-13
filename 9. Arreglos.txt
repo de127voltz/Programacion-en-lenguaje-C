@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char const *argv[]) {
+  int arreglo1[10]={31,25,54,64,64,1,2414};
+  printf("valor: %d\n",arreglo1[3]);
+  char cadena[10]={"ATOM VA"};
+  printf("%s\n",cadena);
+
+  int arreglo2[5];
+  int i=0;
+
+  for(i=0;i<5;i++){
+    printf("Dame el valor %d: ",i+1);
+    scanf("%d",&arreglo2[i]);
+    fflush(stdin);
+  }
+  for(i=0;i<5;i++){
+    printf("%d, ",arreglo2[i]);
+  }
+  printf("\n\n");
+
+  char nombre[60];
+  printf("Dame tu nombre: ");
+  gets(nombre);
+  fflush(stdin);
+
+  printf("Tu nombre es: %s\n",nombre);
+  return 0;
+}

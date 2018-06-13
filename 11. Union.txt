@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+union Mensaje{
+
+  char mensaje[20];
+  char ayuda[30];
+};
+
+int main() {
+  union Mensaje mensj1;
+  printf("Dame un mensaje cualquier: ");
+  gets(mensj1.mensaje);
+  fflush(stdin);
+  printf("Su mensaje es: %s\n", mensj1.mensaje);
+  printf("Dame un mensaje de auxilio: ");
+  gets(mensj1.ayuda);
+  fflush(stdin);
+  printf("Su mensaje de ayuda es: %s\n",mensj1.ayuda);
+  printf("Su mensaje es: %s\n",mensj1.mensaje);
+  return 0;
+}

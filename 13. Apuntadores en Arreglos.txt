@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+
+  srand(time(NULL));
+
+  int lavadocoches[5];
+  int i = 0;
+  int *aplavadocoches;
+
+  aplavadocoches=lavadocoches;
+
+  for(i=0;i<5;i++){
+    *(aplavadocoches+i) = (rand()%20)+1;
+  }
+  for(i=0;i<5;i++){
+    printf("Los coches lavados el dia %d son: %d\n",i+1,*(aplavadocoches+i));
+  }
+
+  return 0;
+}

@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+
+  //Inclusion de datos
+  int dia = 0;
+  int mes = 0;
+  int anio = 0;
+  int *apfecha;
+  //Impresion normal con tipos de dato sin apuntador
+  printf("Danos tu fecha de nacimiento: \n\n");
+  printf("Dia: ");
+  scanf("%d",&dia);
+  fflush(stdin);
+  printf("Mes: ");
+  scanf("%d",&mes);
+  fflush(stdin);
+  printf("Anio: ");
+  scanf("%d",&anio);
+  fflush(stdin);
+
+  printf("Su fecha de nacimiento es: %d / %d / %d",dia, mes, anio);
+  getchar();
+  system("CLS");
+  //Va a hacer referencia a la direccino de dia
+
+  apfecha=&dia;
+  printf("Danos tu fecha de nacimiento: \n\n");
+  printf("Dia: ");
+  scanf("%d",apfecha);
+  fflush(stdin);
+  apfecha=&mes;
+  printf("Mes: ");
+  scanf("%d",apfecha);
+  fflush(stdin);
+  apfecha=&anio;
+  printf("Anio: ");
+  scanf("%d",apfecha);
+  fflush(stdin);
+
+  apfecha=&dia;
+  printf("Su fecha de nacimiento es: %d /",*apfecha);
+
+  apfecha=&mes;
+  printf("%d / ",*apfecha);
+
+  apfecha=&anio;
+  printf("%d\n",*apfecha);
+
+
+  return 0;
+}

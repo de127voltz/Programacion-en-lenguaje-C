@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char const *argv[]) {
+  int num=0;
+  double factorial=1;
+  int i=0;
+
+  printf("\tFACTORIAL CALCULADORA\n\n");
+  printf("Deme un numero para calcula su factorial: ");
+  scanf("%d",&num);
+
+  for (i=1;i<=num;i++) {
+    factorial=factorial*i;
+  }
+  printf("Su factorial es: %.0f",factorial);
+
+
+  return 0;
+}

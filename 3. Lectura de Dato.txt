@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  float mivariable=0;
+  char micaracter='h';
+  printf("Dame un numero con decimales: ");
+  scanf("%f",&mivariable);
+  fflush(stdin);
+  system("CLS");
+  printf("El valor que tu me diste es: %.3f",mivariable);
+  getchar();
+  system("CLS");
+  printf("Mi caracteres %c\n", micaracter);
+  printf("Dame un caracter: ");
+  scanf("%c",&micaracter);
+  fflush(stdin);
+  printf("Caracter que me diste: %c",micaracter);
+
+
+  return 0;
+}

@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char const *argv[]) {
+  int num=255;
+  printf("Estas son impresion de tipo numero\n");
+  printf("Numero en decimal: %d\n",num); //para imprimir decimal
+  printf("Numero en hexadecimal: %X\n",num);  //Para imprimir hexadecimal
+  printf("Numero en octal:  %o\n",num); //Para imprimir octal
+  printf("Para imprimir un caracter: %c\n", num); //Impresion de caracter
+
+  return 0;
+}

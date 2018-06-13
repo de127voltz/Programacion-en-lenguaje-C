@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+//prototipo de funcion
+void cambiocaracter(char *c);
+
+int main() {
+  char caracter='A';
+  int var=0;
+  printf("Su caracter es: %c\n",caracter);
+  cambiocaracter(&caracter);
+  printf("Nuevo caracter es: %c\n",caracter);
+  return 0;
+}
+//Definicion de funcion
+void cambiocaracter(char *c){
+  *c='b';
+
+}

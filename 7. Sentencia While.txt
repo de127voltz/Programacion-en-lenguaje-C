@@ -1,0 +1,61 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main() {
+  int opc=0;
+  float numero=0;
+  float resultado=0;
+
+  do {
+    system("CLS");
+    printf("\tPROGRAMA DE CALCULADORA EXTRA\n\n");
+    printf("Elija una opcion del menu a realizar:\n");
+    printf("1.- Un numero elevado al cuadrado\n");
+    printf("2.- Raiz cuadrada de un numero\n");
+    printf("3.- Elevar la constante euler a un numero\n");
+    printf("4.- Salir\n");
+    scanf("%d",&opc);
+    fflush(stdin);
+
+    switch (opc) {
+      case 1:
+        printf("Ingrese el numero a elevar al cuadrada: ");
+        scanf("%f",&numero);
+        fflush(stdin);
+        resultado = pow(numero, 2);
+        printf("Su resultado de %.2f ^2 es: %.2f\n",numero, resultado);
+        getchar();
+      break;
+      case 2:
+        printf("Ingrese un numero para obtener su raiz cuadrada: ");
+        scanf("%f",&numero);
+        fflush(stdin);
+        resultado = sqrt(numero);
+        printf("Su resultado de obtener la raiz cuadrada de %.2f es: %.2f\n",numero, resultado);
+        getchar();
+      break;
+      case 3:
+        printf("Ingrese un numero para elevar euler a esa potencia: ");
+        scanf("%f",&numero);
+        fflush(stdin);
+        resultado = exp(numero);
+        printf("Su resultado de e ^ %.2f  es: %.2f\n",numero, resultado);
+        getchar();
+      break;
+      case 4:
+        printf("Saliendo...\n");
+      break;
+      default:
+        printf("ERROR\n");
+    }
+
+  } while(opc != 4);
+
+  while (opc==4) {
+    printf("Va imprimir infinitamente este mensaje.\n");
+    opc++;
+  }
+
+  return 0;
+}
